@@ -1,0 +1,35 @@
+html {
+	background-color: #F9F7F2;
+}
+
+body {
+	max-width: 879px;
+	margin: auto;
+}
+
+h1 {
+	font-family: 'KievitProBold';
+	font-size: 29px;
+	line-height: 35px;
+	letter-spacing: 0.03em;
+	margin-bottom: 19px;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	background-color: #FFFFFF;
+}
+
+
+.main {
+	font-family: 'KievitProRegular';
+	font-size: 17px;
+	line-height: 25px;
+	max-width: 373px; 
+}
+
+.main__read_more {
+	border-bottom: 3px solid #FF4641;
+	font-family: 'KievitProRegular';
+}
