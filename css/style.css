@@ -292,13 +292,14 @@ body {
 
 .chat__window-interlocutor-inner {
 	display: flex;
+	align-items: center;
 } 
 
 .send__button i {
 	font-size: 22px;
 	color: red;
 }
- /*linear-gradient(90deg, #F5A623 0%, #F5C723 100%);*/
+
 .fa-star {
 	color: #F1EBDB;
 
@@ -314,4 +315,13 @@ body {
 .chat__window__with__admin {
 	justify-content: flex-start;
 	padding-left: 15px;
+}
+.messageWindow {
+	padding: 12px 40px 25px 12px;
+}
+
+.userMessageWindow {
+	background-color: #F9F7F2;
+
+
 }
