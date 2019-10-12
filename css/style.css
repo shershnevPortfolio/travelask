@@ -1,10 +1,15 @@
 html {
 	background-color: #F9F7F2;
+	padding-top: 110px;
+	padding-bottom: 134px;
 }
 
 body {
 	max-width: 879px;
 	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .semantic {
@@ -201,7 +206,6 @@ body {
 .carousel__switch {
 	width: 4px;
 	height: 4px;
-	/*background: #212121;*/
 	border-radius: 50%;
 	margin-right: 15px;
 	cursor: pointer;
@@ -217,4 +221,97 @@ body {
 
 .reviews .non_semantic__heading {
 	margin-bottom: 50px;
+}
+
+.chat_section {
+	position: relative;
+}
+
+.chat_section-inner {
+	width: 415px;
+	height: 698px;
+	background-color: #FFFFFF;
+}
+
+.chat_section-container {
+	display: flex;
+	justify-content: space-between; 
+	margin-top: 50px;
+}
+
+.chat__window {
+	height: 500px; 
+	overflow-y: scroll;
+}
+
+
+.chat__input {
+	min-height: 100px; 
+	border-top:1px solid #ECECEC; 
+	background-color: white; 
+	display: flex; 
+	justify-content: space-around; 
+	align-items: center;
+}
+
+.chat__input_window {
+	width: 270px; 
+	min-height: 10px;
+}
+
+.chat__window-interlocutor {
+	height: 100px;
+	border-bottom:1px solid #ECECEC; 
+	display: flex; 
+	align-items: center;
+	justify-content: space-around;
+}
+.chat__window-interlocutor__name-container {
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+
+}
+
+.chat__window-interlocutor__name {
+	font-family: KievitProBold ;
+	font-size: 18px;
+	line-height: 17px;
+}
+
+.chat__window-interlocutor__position {
+	font-family: KievitProRegular;
+	font-size: 13px;
+	line-height: 17px;
+	color: #FF4641;
+}
+
+.chat__window-interlocutor__position i {
+	margin-right: 4px;
+}
+
+.chat__window-interlocutor-inner {
+	display: flex;
+} 
+
+.send__button i {
+	font-size: 22px;
+	color: red;
+}
+ /*linear-gradient(90deg, #F5A623 0%, #F5C723 100%);*/
+.fa-star {
+	color: #F1EBDB;
+
+}
+
+.active__star  {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5A623), to(#F5C723));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: initial;
+}
+
+.chat__window__with__admin {
+	justify-content: flex-start;
+	padding-left: 15px;
 }
