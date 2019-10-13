@@ -318,10 +318,25 @@ body {
 }
 .messageWindow {
 	padding: 12px 40px 25px 12px;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: flex-start;
+	font-family: KievitProRegular;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+.messageWindow img {
+	margin-right: 19px;
 }
 
 .userMessageWindow {
 	background-color: #F9F7F2;
-
-
 }
+
+.message__window__text {
+	max-width: 300px;
+	word-break:break-all;
+}
+
