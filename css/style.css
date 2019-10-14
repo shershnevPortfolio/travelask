@@ -2,6 +2,7 @@ html {
 	background-color: #F9F7F2;
 	padding-top: 110px;
 	padding-bottom: 134px;
+	position: relative;
 }
 
 body {
@@ -127,6 +128,11 @@ body {
 	height: 50px;
 	margin-right: 5px;
 	position: relative;
+	cursor: pointer;
+}
+
+.reviews__article-images__child {
+
 }
 
 .reviews__article-images div:last-child {
@@ -151,25 +157,10 @@ body {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
-}
-
-.reviews__article-image-1 {
-	background-image: url('../images/reviews__article-image-1.png');
-}
-
-.reviews__article-image-2 {
-	background-image: url('../images/reviews__article-image-2.png');
+	top: 0;
 }
 
 
-.reviews__article-image-3 {
-	background-image: url('../images/reviews__article-image-3.png');
-}
-
-
-.reviews__article-image-4 {
-	background-image: url('../images/reviews__article-image-3.png');
-}
 
 .all_rewies__button {
 	border: 2px solid #FF4641;
@@ -221,6 +212,47 @@ body {
 
 .reviews .non_semantic__heading {
 	margin-bottom: 50px;
+}
+
+.reviews__images__popup {
+	position: fixed;
+	align-items: center;
+	width: 800px;
+	height: 800px;
+	z-index: 3;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	display: flex;
+	justify-content: space-between;
+}
+
+.reviews__images__popup i {
+	cursor: pointer;
+}
+
+.popup__bg {
+	position: absolute;
+	background-color: rgba(0,0,0,0.5); 
+	height: 100%; 
+	width: 100%; 
+	left: 0;
+	top: 0; 
+	z-index: 2;
+}	
+
+.switch__article__image {
+	font-size: 50px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.close__popup {
+	font-size: 30px;
+	position: absolute;
+	top: 40px;
+	right:0;
+	color: white;
+
 }
 
 .chat_section {
@@ -340,3 +372,7 @@ body {
 	word-break:break-all;
 }
 
+.non__active__switch {
+	color: gray;
+	cursor: auto;
+}

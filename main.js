@@ -58,16 +58,67 @@ function sendMessage(e) {
         }
         messageWindow.appendChild(chatImage);
         chatsWindows[i].scrollTop = chatsWindows[i].scrollHeight;
-    }
-    /*var messageWindows = document.getElementsByClassName('messageWindow');
-    var allMesagesHeight;
-    for(let i = 0;  i < messageWindows.length + 1; i++) {
-        allMesagesHeight = allMesagesHeight messageWindows[i].clientHeight;
-        alert(allMesagesHeight);
-    }*/
-        
+    }   
 }
 
+
+function addOnclickToArticleImages() {
+  let reviwesArticleImages = document.getElementsByClassName('reviews__article-images__child');
+  for (let i = 0; i < reviwesArticleImages.length; i++) {
+        reviwesArticleImages[i].addEventListener('click', togglePopUp);
+     }
+  }
+
+
+function togglePopUp() {
+  var popupElements = document.getElementsByClassName('popup__element');
+  for(let i = 0; i < popupElements.length; i++) {
+    popupElements[i].classList.toggle('semantic');
+  }
+
+ if (this.id === 'hide__popup') {
+    return 0;
+ }
+   document.getElementById('popUpImage').src = this.children[0].getAttribute('src');
+   localStorage.setItem('popup', JSON.stringify(this.id)); 
+
+}
+
+function switchToNextRewiewsImage() {
+ let containerOfCurrentImage =  document.getElementById(JSON.parse(localStorage.getItem('popup')));
+ let nextSwitch = document.getElementById('next__reviews__image');
+ let previousSwitch = document.getElementById('previous__reviews__image');
+ previousSwitch.classList.remove('non__active__switch');
+ if (containerOfCurrentImage.nextElementSibling == null) {
+   nextSwitch.classList.add('non__active__switch');
+   return 0;
+ }
+ document.getElementById('popUpImage').src = containerOfCurrentImage.nextElementSibling.children[0].getAttribute('src');
+ localStorage.setItem('popup', JSON.stringify(containerOfCurrentImage.nextElementSibling.id));    
+ 
+}
+
+function switchToPreviousRewiewsImage() {
+ let containerOfCurrentImage =  document.getElementById(JSON.parse(localStorage.getItem('popup')));
+ let nextSwitch = document.getElementById('next__reviews__image');
+ let previousSwitch = document.getElementById('previous__reviews__image');
+ nextSwitch.classList.remove('non__active__switch');
+ if (containerOfCurrentImage.previousElementSibling == null) {
+   previousSwitch.classList.add('non__active__switch');
+   return 0;
+ }
+ document.getElementById('popUpImage').src = containerOfCurrentImage.previousElementSibling.children[0].getAttribute('src');
+ localStorage.setItem('popup', JSON.stringify(containerOfCurrentImage.previousElementSibling.id));       
+}
+
+
+
 window.addEventListener('load', randomName);
+window.addEventListener('load', addOnclickToArticleImages);
+document.getElementById('hide__popup').addEventListener('click', togglePopUp);
 document.getElementById('send__button-id').addEventListener('click', sendMessage);
+document.getElementById('next__reviews__image').addEventListener('click',switchToNextRewiewsImage);
+document.getElementById('previous__reviews__image').addEventListener('click',switchToPreviousRewiewsImage);
 document.getElementById('send__button-id-2').addEventListener('click', sendMessage);
+
+

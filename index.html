@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/scrollbar.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/53b2d31dd8.js" crossorigin="anonymous"></script>
     </head>
+    <div  class="popup__bg popup__element semantic" id="popup__bg"> </div>
     <body>
         <header class="header">
             <div>
@@ -24,6 +24,14 @@
             </div>
         </header>
         <div class="reviews">
+            <div  id="reviews__images__popup" class="reviews__images__popup semantic popup__element">
+                <i class="fas fa-times close__popup" id="hide__popup" ></i> 
+                <i class="fas fa-angle-left switch__article__image" id="previous__reviews__image"></i>
+                <div>
+                    <img id="popUpImage" style="height: 500px; width: 500px;" src="images/reviews__article__image-1.svg" alt="">
+                </div>
+                <i class="fas fa-angle-right switch__article__image" id="next__reviews__image"></i>
+            </div>
             <span class="non_semantic__heading">Отзывы о Барселоне </span>
             <section class="reviews__section">
                 <h2 class="heading semantic">Отзывы о Барселоне</h2>
@@ -44,11 +52,19 @@
 					с огромным удовольствием всем рекомендую хоть раз там <br>побывать и осмотреть...
 				
                     </div>
-                    <div class="reviews__article-images">
-                        <div class="reviews__article-image-1"></div>
-                        <div class="reviews__article-image-2"></div>
-                        <div class="reviews__article-image-3"></div>
-                        <div class="reviews__article-image-4"></div>
+                    <div id="review-1" class="reviews__article-images">
+                        <div id="review-1_child-1" class="reviews__article-images__child">
+                            <img src="images/reviews__article__image-1.svg" alt="">  
+                        </div>
+                        <div id="review-1_child-2" class="reviews__article-images__child">
+                            <img src="images/reviews__article__image-2.svg" alt="">
+                        </div class="reviews__article-images__child">
+                        <div id="review-1_child-3" class="reviews__article-images__child">
+                            <img src="images/reviews__article__image-3.svg" alt="">
+                        </div class="reviews__article-images__child">
+                        <div id="review-1_child-4">
+                            <img src="images/reviews__article__image-3.svg" alt="">
+                        </div>
                     </div>
                     <footer class="reviews__article-footer">
                         <span>около 1 года назад</span>
@@ -79,11 +95,19 @@
 					с огромным удовольствием всем рекомендую хоть раз там <br>побывать и осмотреть...
 				
                     </div>
-                    <div class="reviews__article-images">
-                        <div class="reviews__article-image-1"></div>
-                        <div class="reviews__article-image-2"></div>
-                        <div class="reviews__article-image-3"></div>
-                        <div class="reviews__article-image-4"></div>
+                    <div id="review-2" class="reviews__article-images">
+                        <div id="review-2_child-1" class="reviews__article-images__child">
+                            <img src="images/reviews__article__image-1.svg" alt="">  
+                        </div>
+                        <div id="review-2_child-2" class="reviews__article-images__child">
+                            <img src="images/reviews__article__image-2.svg" alt="">
+                        </div class="reviews__article-images__child">
+                        <div id="review-2_child-3" class="reviews__article-images__child">
+                            <img src="images/reviews__article__image-3.svg" alt="">
+                        </div class="reviews__article-images__child">
+                        <div id="review-2_child-4">
+                            <img src="images/reviews__article__image-3.svg" alt="">
+                        </div>
                     </div>
                     <footer class="reviews__article-footer">
                         <span>около 1 года назад</span>
@@ -114,11 +138,19 @@
 					с огромным удовольствием всем рекомендую хоть раз там <br>побывать и осмотреть...
 				
                     </div>
-                    <div class="reviews__article-images">
-                        <div class="reviews__article-image-1"></div>
-                        <div class="reviews__article-image-2"></div>
-                        <div class="reviews__article-image-3"></div>
-                        <div class="reviews__article-image-4"></div>
+                    <div id="review-3" class="reviews__article-images">
+                        <div id="review-3_child-1" class="reviews__article-images__child">
+                            <img src="images/reviews__article__image-1.svg" alt="">  
+                        </div>
+                        <div id="review-3_child-2" class="reviews__article-images__child">
+                            <img src="images/reviews__article__image-2.svg" alt="">
+                        </div class="reviews__article-images__child">
+                        <div id="review-3_child-3" class="reviews__article-images__child">
+                            <img src="images/reviews__article__image-3.svg" alt="">
+                        </div class="reviews__article-images__child">
+                        <div id="review-3_child-4">
+                            <img src="images/reviews__article__image-3.svg" alt="">
+                        </div>
                     </div>
                     <footer class="reviews__article-footer">
                         <span>около 1 года назад</span>
@@ -207,8 +239,9 @@
                         </a>
                     </div>
                 </div>
-            </classction>
+            </section>
         </div>
         <script src="main.js"></script>
+        <script src="https://kit.fontawesome.com/53b2d31dd8.js" crossorigin="anonymous"></script>
     </body>
 </html>
