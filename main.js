@@ -12,9 +12,9 @@ function randomName() {
         var messageWindowText = document.createElement('div');
         messageWindowText.className = 'message__window__text';
         messageWindow.appendChild(messageWindowText);
-        messageWindowText.innerHTML = messagesArray[a][1];
+        messageWindowText.innerHTML = messagesArray[a].messageText;
         var chatImage = document.createElement('img');
-        if (messagesArray[a][0] == 'send__button-id-2') {
+        if (messagesArray[a].messageAuthor == 'send__button-id-2') {
             messageWindow.classList.add('userMessageWindow');
             chatImage.src = document.getElementsByClassName('user__image')[0].getAttribute('src');
             chatImage.alt = document.getElementsByClassName('user__image')[0].getAttribute('alt');
@@ -37,7 +37,7 @@ function sendMessage(e) {
     }
     var chatsWindows = document.getElementsByClassName('chat__window');
     var messagesInfo = JSON.parse(localStorage.getItem('messages'));
-    messagesInfo.push([this.id.toString(), document.getElementById(this.id.toString() + "_textarea").value]);
+    messagesInfo.push({'messageAuthor':this.id.toString(), 'messageText': document.getElementById(this.id.toString() + "_textarea").value});
     localStorage.setItem('messages', JSON.stringify(messagesInfo));
     for (let i = 0; i < chatsWindows.length; i++) {
         var messageWindow = document.createElement('div');
