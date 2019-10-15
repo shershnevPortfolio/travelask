@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/scrollbar.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+        <script src="js/slider.js"></script>
     </head>
     <div  class="popup__bg popup__element semantic" id="popup__bg"> </div>
     <body>
@@ -34,7 +35,7 @@
             </div>
             <span class="non_semantic__heading">Отзывы о Барселоне </span>
             <div class="reviews__section-container">  
-            <section style="left: 0; display: flex; justify-content: space-between;" class="reviews__section">
+            <section id="reviews__section"  class="reviews__section">
                 <h2 class="heading semantic">Отзывы о Барселоне</h2>
                 <article class="reviews__article">
                     <div class="reviews__article_author">
@@ -294,26 +295,25 @@
                         </div>
                     </footer>
                 </article>
-
             </section>
         </div>
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <div class="all_rewies__button">
                     <a href="#">Все отзывы</a>
                 </div>
-                <div class="carousel__switch-container">
-                    <div class="carousel__switch active"></div>
+                <div id="carousel__switch-container" class="carousel__switch-container">
+                   <!--  <div class="carousel__switch active"></div>
                     <div class="carousel__switch "></div>
                     <div class="carousel__switch"></div>
                     <div class="carousel__switch"></div>
                     <div class="carousel__switch"></div>
                     <div class="carousel__switch"></div>
-                    <div class="carousel__switch"></div>
+                    <div class="carousel__switch"></div> -->
                 </div>
             </div>
         </div>
         <div class="chat_section-container">
-            <section class="chat_section">
+            <section class="chat_section" >
                 <h2 class="heading">Чат с пользователем</h2>
                 <div class="chat_section-inner">
                     <div class="chat__window-interlocutor">

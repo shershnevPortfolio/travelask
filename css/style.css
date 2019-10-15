@@ -6,7 +6,7 @@ html {
 }
 
 body {
-	max-width: 879px;
+	max-width: 875px;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -63,10 +63,13 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-right: 8px;
+	margin-right: 0px;
+	max-width: 280px;
 	min-width: 280px;
     box-sizing: border-box
 }
+
+
 
 .reviews__article_author {
 	display: flex;
@@ -186,6 +189,8 @@ body {
 	margin-top: 21px;
 	position: relative;
 	transition: all ease 3s; 
+	left: 0;
+	justify-content: space-between
 
 }
 
