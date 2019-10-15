@@ -53,8 +53,7 @@ body {
 	background-color: #FFFFFF;
 	margin-top: 20px;
 	overflow-x:hidden;
-	padding: 33px;
-
+	padding:35px 12px;
 }
 
 .reviews__article {
@@ -64,8 +63,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-right: 20px;
-	min-width: 300px;
+	margin-right: 8px;
+	min-width: 280px;
     box-sizing: border-box
 }
 
@@ -176,13 +175,18 @@ body {
 	color: #212121;
 }
 
+.reviews__section-container {
+	overflow-x: hidden;
+	background-color: red;
+}
+
 .reviews__section {
 	margin-bottom: 32px;
 	display: flex;
-	overflow-x: hidden;
 	margin-top: 21px;
-	
-	
+	position: relative;
+	transition: all ease 3s; 
+
 }
 
 .carousel__switch-container {

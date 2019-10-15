@@ -28,6 +28,8 @@ function randomName() {
 
     }
 }
+
+
 }
 
 function sendMessage(e) {
@@ -67,6 +69,10 @@ function addOnclickToArticleImages() {
   for (let i = 0; i < reviwesArticleImages.length; i++) {
         reviwesArticleImages[i].addEventListener('click', togglePopUp);
      }
+     let carouselSwitch = document.getElementsByClassName('carousel__switch');
+     for(let i = 0; i < carouselSwitch.length; i++) {
+        carouselSwitch[i].addEventListener('click', slideArticles);
+     }
   }
 
 
@@ -99,9 +105,9 @@ function switchToNextRewiewsImage() {
 }
 
 function switchToPreviousRewiewsImage() {
- let containerOfCurrentImage =  document.getElementById(JSON.parse(localStorage.getItem('popup')));
- let nextSwitch = document.getElementById('next__reviews__image');
- let previousSwitch = document.getElementById('previous__reviews__image');
+let containerOfCurrentImage =  document.getElementById(JSON.parse(localStorage.getItem('popup')));
+let nextSwitch = document.getElementById('next__reviews__image');
+let previousSwitch = document.getElementById('previous__reviews__image');
  nextSwitch.classList.remove('non__active__switch');
  if (containerOfCurrentImage.previousElementSibling == null) {
    previousSwitch.classList.add('non__active__switch');
@@ -111,7 +117,19 @@ function switchToPreviousRewiewsImage() {
  localStorage.setItem('popup', JSON.stringify(containerOfCurrentImage.previousElementSibling.id));       
 }
 
-
+var left = 0;
+function slideArticles() {
+    let reviwesArticle =  document.getElementsByClassName('reviews__article')[0];
+    if (this.classList.contains('active')) {
+        return 0;
+    }
+    else {
+        left -= /*Number(reviwesArticle.offsetWidth + getComputedStyle(reviwesArticle,null).marginRight);*/288*3;
+        var reviewsContainer = document.getElementsByClassName('reviews');
+        console.log(getComputedStyle(reviewsContainer[0],null).padding);
+        document.getElementsByClassName('reviews__section')[0].style.left = left  + 'px';        
+   }        
+}
 
 window.addEventListener('load', randomName);
 window.addEventListener('load', addOnclickToArticleImages);
