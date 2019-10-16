@@ -28,7 +28,7 @@ body {
 
 .header {
 	display: flex;
-	align-items: center;
+	align-items: center;*
 	background-color: #FFFFFF;
 }
 
@@ -37,14 +37,14 @@ body {
 }
 
 
-.main {
+.header-text {
 	font-family: 'KievitProRegular';
 	font-size: 17px;
 	line-height: 25px;
 	max-width: 373px; 
 }
 
-.main__read_more {
+.header-text__read_more {
 	border-bottom: 3px solid #FF4641;
 	font-family: 'KievitProRegular';
 }
@@ -164,14 +164,14 @@ body {
 
 
 
-.all_rewies__button {
+.all_reviews__button {
 	border: 2px solid #FF4641;
 	border-radius: 2px;
 	padding: 10px 23px 13px 24px;
 	display: inline-block;
 }
 
-.all_rewies__button a{
+.all_reviews__button a{
 	font-family: KievitProRegular;
 	font-size: 15px;
 	line-height: 17px;
@@ -180,7 +180,7 @@ body {
 
 .reviews__section-container {
 	overflow-x: hidden;
-	background-color: red;
+	
 }
 
 .reviews__section {
@@ -258,7 +258,7 @@ body {
 .close__popup {
 	font-size: 30px;
 	position: absolute;
-	top: 40px;
+	top: 100px;
 	right:0;
 	color: white;
 

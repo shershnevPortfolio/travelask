@@ -1,4 +1,4 @@
-function randomName() {
+function chatOnLoad() {
     if (localStorage.getItem('messages') == null) {
         localStorage.setItem('messages', JSON.stringify([]));
     } else {
@@ -123,7 +123,7 @@ let previousSwitch = document.getElementById('previous__reviews__image');
 }
 
 
-window.addEventListener('load', randomName);
+window.addEventListener('load', chatOnLoad);
 window.addEventListener('load', addOnclickToArticleImages);
 document.getElementById('hide__popup').addEventListener('click', togglePopUp);
 document.getElementById('send__button-id').addEventListener('click', sendMessage);
